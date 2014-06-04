@@ -28,10 +28,14 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			this.btnExit = new System.Windows.Forms.Button();
 			this.listView1 = new System.Windows.Forms.ListView();
 			this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.label1 = new System.Windows.Forms.Label();
+			this.coreBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			((System.ComponentModel.ISupportInitialize)(this.coreBindingSource)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// btnExit
@@ -72,17 +76,34 @@
 			this.columnHeader2.Text = "Event";
 			this.columnHeader2.Width = 237;
 			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.coreBindingSource, "LastWriteTime", true, System.Windows.Forms.DataSourceUpdateMode.Never, null, "F"));
+			this.label1.Location = new System.Drawing.Point(13, 236);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(35, 13);
+			this.label1.TabIndex = 2;
+			this.label1.Text = "label1";
+			// 
+			// coreBindingSource
+			// 
+			this.coreBindingSource.DataSource = typeof(ISaidMineCore.Core);
+			// 
 			// fMain
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(390, 262);
+			this.Controls.Add(this.label1);
 			this.Controls.Add(this.listView1);
 			this.Controls.Add(this.btnExit);
 			this.Name = "fMain";
 			this.Text = "I Said Mine!";
 			this.Shown += new System.EventHandler(this.fMain_Shown);
+			((System.ComponentModel.ISupportInitialize)(this.coreBindingSource)).EndInit();
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 
@@ -92,6 +113,8 @@
 		private System.Windows.Forms.ListView listView1;
 		private System.Windows.Forms.ColumnHeader columnHeader1;
 		private System.Windows.Forms.ColumnHeader columnHeader2;
+		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.BindingSource coreBindingSource;
 	}
 }
 

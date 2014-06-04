@@ -51,6 +51,7 @@ namespace ISaidMineGUI
 
 		private void fMain_Shown(object sender, EventArgs e)
 		{
+			this.coreBindingSource.DataSource = this.minerKiller;
 			this.minerKiller.StartWatching();
 		}
 	}
