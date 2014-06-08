@@ -16,7 +16,7 @@ namespace ISaidMineGUI
 		public fMain()
 		{
 			InitializeComponent();
-			this.minerKiller = new ISaidMineCore.Core(this, @"sgminer", @"C:\Program Files (x86)\sgminer-ltcrabbit-v3\logs\last.log", 10*60);
+			this.minerKiller = new ISaidMineCore.Core(this, @"sgminer", @"C:\Program Files (x86)\sgminer-ltcrabbit-v3\logs\last.log", 15*60);
 			this.minerKiller.KillingMiner += new ISaidMineCore.Core.KillingMinerEventHandler(minerKiller_KillingMiner);
 			this.minerKiller.MinerProcessKilled += new ISaidMineCore.Core.MinerKilledEventHandler(minerKiller_MinerProcessKilled);
 			this.minerKiller.MinerProcessAlive += new ISaidMineCore.Core.MinerAliveEventHandler(minerKiller_MinerProcessAlive);

@@ -42,7 +42,7 @@
 			// 
 			this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.btnExit.DialogResult = System.Windows.Forms.DialogResult.OK;
-			this.btnExit.Location = new System.Drawing.Point(303, 227);
+			this.btnExit.Location = new System.Drawing.Point(303, 231);
 			this.btnExit.Name = "btnExit";
 			this.btnExit.Size = new System.Drawing.Size(75, 23);
 			this.btnExit.TabIndex = 0;
@@ -78,6 +78,7 @@
 			// 
 			// label1
 			// 
+			this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.label1.AutoSize = true;
 			this.label1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.coreBindingSource, "LastWriteTime", true, System.Windows.Forms.DataSourceUpdateMode.Never, null, "F"));
 			this.label1.Location = new System.Drawing.Point(13, 236);
